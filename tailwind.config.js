@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         avatar: "#eae7e2",
+        banner: "#fed1aa",
       },
     },
   },
