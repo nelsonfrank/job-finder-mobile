@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         avatar: "#eae7e2",
         banner: "#fed1aa",
+        "button-default": "#f3f2f3",
       },
     },
   },
