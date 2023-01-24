@@ -6,6 +6,9 @@ import { TbBrandJavascript } from "react-icons/tb";
 import Header from "@/components/header";
 import Banner from "@/components/banner";
 import Card from "@/components/card";
+import Navigator from "@/components/navigator";
+
+// types
 import { JobPost } from "@/components/card/Card";
 
 const jobPosts: JobPost[] = [
@@ -67,6 +70,9 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+        <div className="relative">
+          <Navigator />
         </div>
       </main>
     </>
