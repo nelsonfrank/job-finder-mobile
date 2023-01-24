@@ -46,7 +46,7 @@ const Navigator = () => {
 
   const { homeClicked, searchClicked, calendarClicked, profileClicked } = state;
   return (
-    <div className="fixed bottom-0 right-0 left-0 flex items-center justify-around bg-white py-8 text-2xl text-gray-600">
+    <div className="fixed bottom-0 right-0 left-0 flex items-center justify-around bg-white py-6 text-2xl text-gray-600">
       <button
         className="outline-none "
         onClick={() => dispatch({ type: "home-clicked" })}
