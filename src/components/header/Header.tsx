@@ -3,6 +3,10 @@ import Image from "next/image";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
+
+// components
+import Button from '../button'
+
 const Header = () => {
   const [avatar, avatarSet] = useState<string>("");
 
@@ -20,9 +24,7 @@ const Header = () => {
           <p className="text-sm text-gray-400">The Best Activity ToDo</p>
         </div>
       </div>
-      <div className="rounded-full bg-white p-3">
-        <FiSearch className="text-xl" />
-      </div>
+      <Button Icon={<FiSearch className="text-xl" />} />
     </div>
   );
 };
