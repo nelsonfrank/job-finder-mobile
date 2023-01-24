@@ -62,8 +62,8 @@ export default function Home() {
             </div>
 
             <div className="my-8">
-              {jobPosts.map((job) => (
-                <Card {...job} key={job.company} />
+              {jobPosts.map((job, index) => (
+                <Card {...job} key={index + 1} />
               ))}
             </div>
           </div>

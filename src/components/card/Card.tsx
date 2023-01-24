@@ -68,7 +68,7 @@ const Card = ({
         {tags?.map((tag, index) => (
           <button
             key={index + 1}
-            className="mr-3 whitespace-nowrap rounded-md bg-gray-200 py-1 px-3 text-sm font-medium capitalize outline-none"
+            className="my-2 mr-2 whitespace-nowrap rounded-md bg-gray-200 py-1 px-3 text-sm font-medium capitalize outline-none"
           >
             {tag}
           </button>
