@@ -26,18 +26,20 @@ const Card = ({
   return (
     <div className="my-6 rounded-2xl bg-white py-4 px-4">
       <div className="mb-4 flex items-center justify-between">
-        <div className="flex items-center">
-          <div className="mr-2 rounded-lg bg-gray-200 p-3">
-            <Image
-              src={companyLogo}
-              alt="telegram"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
+        <div className="flex">
+          <div>
+            <div className="mr-2  rounded-lg bg-gray-200 p-3">
+              <Image
+                src={companyLogo}
+                alt="telegram"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+            </div>
           </div>
           <div>
-            <h4 className="mb-1 font-medium capitalize">{company}</h4>
+            <h4 className=" font-medium capitalize">{company}</h4>
             <h2 className="mb-1 text-lg font-bold capitalize">{position}</h2>
             <p className="text-sm font-light capitalize text-zinc-400">
               {location} - {type}
@@ -45,7 +47,7 @@ const Card = ({
           </div>
         </div>
         <div className="rounded-md bg-gray-200 p-2 ">
-          {bookmarked ? (
+          {!bookmarked ? (
             <button
               className="text-2xl outline-none"
               onClick={() => bookmarkSet(!bookmarked)}
