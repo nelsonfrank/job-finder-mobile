@@ -5,10 +5,34 @@ import Image from "next/image";
 // components
 import { HeaderWithNavigation } from "@/components/header/Header";
 import Navigator from "@/components/navigator";
+import Card from "@/components/card";
 
 // utils
 import { getUserAvatar } from "@/utils";
 
+//type
+import { JobPost } from "@/components/card/Card";
+import { FiChevronRight } from "react-icons/fi";
+const experience: JobPost[] = [
+  {
+    company: "Behance",
+    companyLogo: "/img/behance.png",
+    location: "Surabaya Indonesia",
+    position: "Senior UI Designer",
+    type: "onsite",
+    excerpt: "",
+    Icon: <FiChevronRight />,
+  },
+  {
+    company: "Telegram",
+    companyLogo: "/img/telegram.png",
+    location: "Jakarta Indonesia",
+    position: "Junior UI Designer",
+    type: "onsite",
+    excerpt: "",
+    Icon: <FiChevronRight />,
+  },
+];
 const Profile = () => {
   const [avatar, avatarSet] = useState<string>("");
 
@@ -21,7 +45,7 @@ const Profile = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen w-full bg-gray-100 px-6 pt-10 pb-32">
+      <main className="min-h-screen w-full bg-gray-100 px-6 pt-10 pb-16">
         <HeaderWithNavigation title="Profile" />
 
         <div className="relative my-6">
@@ -46,7 +70,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="my-20">
+        <div className="mt-20">
           <div>
             <h3 className="font-medium text-zinc-500">Biography</h3>
           </div>
@@ -78,6 +102,15 @@ const Profile = () => {
               </p>
               <h2 className="mb-1 text-sm font-semibold">15</h2>
             </div>
+          </div>
+          <div className="my-4">
+            <h3 className="font-medium text-zinc-500">Experience</h3>
+          </div>
+
+          <div className="my-4">
+            {experience.map((experience, index) => (
+              <Card {...experience} key={index + 1} />
+            ))}
           </div>
         </div>
       </main>
