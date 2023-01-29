@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBookmark } from "react-icons/fa";
 import Image from "next/image";
 import { FiBookmark } from "react-icons/fi";
+import { useRouter } from "next/router";
 
 export interface JobPost {
   company: string;
@@ -23,8 +24,15 @@ const Card = ({
 }: JobPost) => {
   const [bookmarked, bookmarkSet] = useState<boolean>(false);
 
+  const router = useRouter();
+  const handleNavigation = () => {
+    router.push("job-details");
+  };
   return (
-    <div className="my-6 rounded-2xl bg-white py-4 px-4">
+    <div
+      className="my-6 rounded-2xl bg-white py-4 px-4"
+      onClick={handleNavigation}
+    >
       <div className="mb-4 flex items-center justify-between">
         <div className="flex">
           <div>

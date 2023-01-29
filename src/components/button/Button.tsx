@@ -6,14 +6,16 @@ export interface ButtonProps {
   title?: string;
   className?: string;
   children?: ReactNode;
+  onClick?: any;
 }
-const Button = ({ Icon, title, className, children }: ButtonProps) => {
+const Button = ({ Icon, title, className, children, onClick }: ButtonProps) => {
   if (Icon) {
     return (
       <button
         className={cx(
           `flex items-center justify-center rounded-full bg-white p-3 outline-none ${className}`
         )}
+        onClick={onClick}
       >
         {Icon}
       </button>
@@ -23,6 +25,7 @@ const Button = ({ Icon, title, className, children }: ButtonProps) => {
     return (
       <button
         className={cx(`rounded-full bg-white p-3 outline-none ${className}`)}
+        onClick={onClick}
       >
         {title}
       </button>
@@ -33,6 +36,7 @@ const Button = ({ Icon, title, className, children }: ButtonProps) => {
     return (
       <button
         className={cx(`rounded-full bg-white p-3 outline-none ${className}`)}
+        onClick={onClick}
       >
         {children}
       </button>
@@ -42,6 +46,7 @@ const Button = ({ Icon, title, className, children }: ButtonProps) => {
   return (
     <button
       className={cx(`rounded-full bg-white p-3 outline-none ${className}`)}
+      onClick={onClick}
     ></button>
   );
 };
