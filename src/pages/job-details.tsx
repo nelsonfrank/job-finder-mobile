@@ -33,7 +33,7 @@ const JobDetails = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen w-full bg-gray-100 px-6 pt-10 pb-16">
+      <main className="min-h-screen w-full bg-gray-100 px-6 pt-10 pb-32">
         <div className="flex items-center justify-between">
           <div>
             <Button
@@ -86,7 +86,7 @@ const JobDetails = () => {
             VoIP, file sharing and several other features.
           </p>
         </div>
-        <div>
+        <div className="my-6">
           <div className=" grid grid-cols-3 divide-x-2 rounded-xl bg-white p-4">
             <div className="px-2 text-center">
               <p className="mb-2 text-xs capitalize text-zinc-500">
@@ -104,7 +104,52 @@ const JobDetails = () => {
             </div>
           </div>
         </div>
+        <div className="my-6">
+          <div className="flex items-center justify-between">
+            <h3 className="font-medium ">Requirements</h3>
+            <button className="cursor-pointer border-none text-xs text-zinc-500">
+              View all
+            </button>
+          </div>
+          <div className="my-4">
+            <div className="flex">
+              <span className="mr-4 font-semibold text-black">#</span>
+              <p className="mb-1 font-light text-zinc-500">
+                Expert in UI/UX Experience
+              </p>
+            </div>
+            <div className="flex">
+              <span className="mr-4 font-semibold text-black">#</span>
+              <p className="mb-1 font-light text-zinc-500">
+                Have a Good Portifolio
+              </p>
+            </div>
+            <div className="flex">
+              <span className="mr-4 font-semibold text-black">#</span>
+              <p className="mb-1 font-light text-zinc-500">
+                Good at Using Animation
+              </p>
+            </div>
+            <div className="flex">
+              <span className="mr-4 font-semibold text-black">#</span>
+              <p className="mb-1 font-light text-zinc-500">
+                Experience Designning across multiple platform
+              </p>
+            </div>
+          </div>
+        </div>
       </main>
+      <div className="fixed bottom-0 right-0 left-0  bg-white px-6 pt-2 pb-8">
+        <div className="my-4 flex justify-between">
+          <h3 className="font-semibold">
+            $420k <span className="ml-1 text-xs text-gray-400">/Year</span>
+          </h3>
+          <p className="text-sm font-normal">18 January 2023</p>
+        </div>
+        <button className="text-medium w-full rounded-xl bg-black py-3 px-10 text-white outline-none">
+          Apply Now
+        </button>
+      </div>
     </>
   );
 };
