@@ -83,7 +83,7 @@ const Profile = () => {
               for popular businesses such as Spiced and The Paper Pepper Club.
             </p>
           </div>
-          <div className="my-6 flex items-center justify-between">
+          <div className="my-6 flex items-center justify-between gap-2">
             <div className="rounded-lg bg-white py-4 px-6 text-center">
               <p className="my-2 text-xs capitalize text-zinc-500 ">
                 Post View
