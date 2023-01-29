@@ -33,7 +33,7 @@ const Card = ({
   return (
     <div
       className="my-6 rounded-2xl bg-white py-4 px-4"
-      onClick={Icon ? handleNavigation : () => {}}
+      onClick={!Icon ? handleNavigation : () => {}}
     >
       <div className=" flex items-center justify-between">
         <div className="flex">
