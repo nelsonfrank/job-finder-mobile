@@ -33,7 +33,7 @@ const Profile = () => {
             />
           </div>
           <div className="my-1">
-            <div className="absolute left-5 -bottom-16 my-4 inline-flex rounded-full bg-white p-3">
+            <div className="absolute left-5 -bottom-11 inline-flex rounded-full bg-white p-3">
               <div className=" h-16 w-16 rounded-full bg-avatar p-2">
                 {avatar ? (
                   <Image src={avatar} alt="Avatar" width={60} height={60} />
@@ -43,6 +43,40 @@ const Profile = () => {
             <div className="absolute left-28">
               <h1 className="text-lg font-medium">Andri</h1>
               <p className="text-xs capitalize text-gray-400">Fresh Graduate</p>
+            </div>
+          </div>
+        </div>
+        <div className="my-20">
+          <div>
+            <h3 className="font-medium text-zinc-500">Biography</h3>
+          </div>
+          <div className="my-4">
+            <p className="text-sm text-zinc-400">
+              Hello, my name is Andri and I am a digital artist based in Mumbai.
+              After graduating with a bachelors degree in graphic design. I
+              began my freelancing career by creating pop culture digital art. I
+              have been creating commissions for two years and have designed art
+              for popular businesses such as Spiced and The Paper Pepper Club.
+            </p>
+          </div>
+          <div className="my-6 flex items-center justify-between">
+            <div className="rounded-lg bg-white py-4 px-6 text-center">
+              <p className="my-2 text-xs capitalize text-zinc-500 ">
+                Post View
+              </p>
+              <h2 className="mb-1 text-sm font-semibold">254</h2>
+            </div>
+            <div className="rounded-lg bg-white py-4 px-6 text-center">
+              <p className="my-2 text-xs capitalize text-zinc-500 ">
+                Applied Job
+              </p>
+              <h2 className="mb-1 text-sm font-semibold">35</h2>
+            </div>
+            <div className="rounded-lg bg-white py-4 px-6 text-center">
+              <p className="my-2 text-xs capitalize text-zinc-500 ">
+                Search Result
+              </p>
+              <h2 className="mb-1 text-sm font-semibold">15</h2>
             </div>
           </div>
         </div>
