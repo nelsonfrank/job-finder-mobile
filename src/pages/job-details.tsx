@@ -86,6 +86,24 @@ const JobDetails = () => {
             VoIP, file sharing and several other features.
           </p>
         </div>
+        <div>
+          <div className=" grid grid-cols-3 divide-x-2 rounded-xl bg-white p-4">
+            <div className="px-2 text-center">
+              <p className="mb-2 text-xs capitalize text-zinc-500">
+                Experience
+              </p>
+              <h2 className="mb-1 text-sm font-semibold">2 - 6 Years</h2>
+            </div>
+            <div className="px-2 text-center">
+              <p className="mb-2 text-xs capitalize text-zinc-500">Job Type</p>
+              <h2 className="mb-1 text-sm font-semibold">Fulltime</h2>
+            </div>
+            <div className="px-2 text-center">
+              <p className="mb-2 text-xs capitalize text-zinc-500">Level</p>
+              <h2 className="mb-1 text-sm font-semibold">Entry level</h2>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
