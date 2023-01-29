@@ -107,7 +107,7 @@ const JobDetails = () => {
         <div className="my-6">
           <div className="flex items-center justify-between">
             <h3 className="font-medium ">Requirements</h3>
-            <button className="cursor-pointer border-none text-xs text-zinc-500">
+            <button className="cursor-pointer border-none text-sm text-zinc-500">
               View all
             </button>
           </div>
