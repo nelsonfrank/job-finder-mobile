@@ -1,11 +1,8 @@
-import { FiArrowLeft, FiBell } from "react-icons/fi";
-
 // components
-import Button from "@/components/button";
 import Head from "next/head";
 import Image from "next/image";
 import { FaBookmark } from "react-icons/fa";
-import { useRouter } from "next/router";
+import { HeaderWithNavigation } from "@/components/header/Header";
 
 const JobDetails = () => {
   const job = {
@@ -19,12 +16,6 @@ const JobDetails = () => {
     tags: ["FullTime", "Internship", "Entry Level"],
   };
 
-  const router = useRouter();
-
-  const handleGoBack = () => {
-    router.back();
-  };
-
   return (
     <>
       <Head>
@@ -34,20 +25,7 @@ const JobDetails = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen w-full bg-gray-100 px-6 pt-10 pb-32">
-        <div className="flex items-center justify-between">
-          <div>
-            <Button
-              Icon={<FiArrowLeft className="text-xl" />}
-              onClick={handleGoBack}
-            />
-          </div>
-          <div>
-            <h2 className="text-xl font-medium">Details</h2>
-          </div>
-          <div>
-            <Button Icon={<FiBell className="text-xl" />} />
-          </div>
-        </div>
+        <HeaderWithNavigation title="Details" />
         <div className="mt-8 flex items-center justify-between">
           <div className="flex">
             <div>
