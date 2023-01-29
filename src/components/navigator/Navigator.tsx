@@ -1,4 +1,5 @@
-import React, { useReducer } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useReducer } from "react";
 import { FaCalendar, FaHome, FaSearch, FaUser } from "react-icons/fa";
 import { FiCalendar, FiHome, FiSearch, FiUser } from "react-icons/fi";
 
@@ -44,12 +45,37 @@ const reducer = (_state: typeof initialState, action: ACTIONTYPE) => {
 const Navigator = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const router = useRouter();
+
   const { homeClicked, searchClicked, calendarClicked, profileClicked } = state;
+
+  useEffect(() => {
+    ((route: string) => {
+      router.push(route);
+      if (route.includes("profile")) {
+        return dispatch({ type: "profile-clicked" });
+      }
+
+      if (route.includes("search")) {
+        return dispatch({ type: "search-clicked" });
+      }
+
+      if (route.includes("calendar")) {
+        return dispatch({ type: "calendar-clicked" });
+      }
+
+      return dispatch({ type: "home-clicked" });
+    })(router.asPath);
+  }, [router.asPath]);
+
   return (
     <div className="fixed bottom-0 right-0 left-0 flex items-center justify-around bg-white py-6 text-2xl text-gray-600">
       <button
         className="outline-none "
-        onClick={() => dispatch({ type: "home-clicked" })}
+        onClick={() => {
+          router.push("/");
+          dispatch({ type: "home-clicked" });
+        }}
       >
         {!homeClicked ? <FiHome /> : <FaHome />}
       </button>
@@ -67,7 +93,10 @@ const Navigator = () => {
       </button>
       <button
         className="outline-none"
-        onClick={() => dispatch({ type: "profile-clicked" })}
+        onClick={() => {
+          router.push("/profile");
+          dispatch({ type: "profile-clicked" });
+        }}
       >
         {!profileClicked ? <FiUser /> : <FaUser />}
       </button>
